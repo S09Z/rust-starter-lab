@@ -9,7 +9,7 @@ My Chat Application is a Rust-based chat application designed with an Event-Driv
 - Performance monitoring with Prometheus and Grafana
 - API documentation with OpenAPI
 - Logging with structured output
-- Database support with Diesel
+- Database support with Diesel and PostgreSQL
 - Asynchronous processing with Tokio
 
 ## Getting Started
@@ -17,10 +17,10 @@ My Chat Application is a Rust-based chat application designed with an Event-Driv
 ### Prerequisites
 - Rust installed (version 1.54 or higher)
 - Docker
-- PostgreSQL (or your preferred database)
+- PostgreSQL (for database)
 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd my_chat_app
+   git clone git@github.com:S09Z/rust-starter-lab.git
+   cd rust-starter-lab
