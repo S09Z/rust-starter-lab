@@ -1,0 +1,34 @@
+name: Rust CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Rust
+      uses: rust-lang/rustup@v1
+      with:
+        toolchain: stable
+
+    - name: Install dependencies
+      run: cargo build --release
+
+    - name: Run tests
+      run: cargo test
+
+    - name: Format code
+      run: cargo fmt -- --check
+
+    - name: Run lint
+      run: cargo clippy -- -D warnings
